@@ -28,7 +28,7 @@
 
 				<div class="form-group">
 					<!-- <input type="submit" value="Verify" class="form-control btn btn-primary"> -->
-					<a href="{{ route('index') }}" class="form-control btn btn-primary">Verify</a>
+					<a href="{{ route('basic_details') }}" class="form-control btn btn-primary">Verify</a>
 				</div>
 
 	      	</form>

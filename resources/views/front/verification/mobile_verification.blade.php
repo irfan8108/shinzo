@@ -17,7 +17,9 @@
 
 				<div class="form-group">
 					<br>
-					<input type="text" placeholder="Mobile Number" class="form-control" focus>
+					<input id="phone" type="tel" class="form-control">
+					<span id="valid-msg" class="hide">Valid</span>
+					<span id="error-msg" class="hide">Invalid number</span>
 				</div>
 
 				<div class="form-group">
@@ -31,3 +33,16 @@
 </div>
 
 @endsection
+
+@push('styles')
+	<link rel="stylesheet" href="{{ asset('css/mobile_verification.css') }}">
+	<link href="{{ asset('css/intlTelInput.css') }}" rel="stylesheet" media="screen">
+@endpush
+
+@push('scripts')
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.min.js"></script> -->
+	<script src="{{ asset('js/utils.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('js/mobile_verification.js') }}"></script>
+@endpush

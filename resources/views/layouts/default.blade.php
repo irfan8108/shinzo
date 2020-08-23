@@ -14,7 +14,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/layout.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/layout_responsive.css') }}">
 
-@push('styles')
+@stack('styles')
 
 </head>
 
@@ -30,7 +30,7 @@
 <script type="text/javascript" src="{{ asset('js/bootstrap.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/common.js') }}"></script>
 
-@push('scripts')
+@stack('scripts')
 
 </body>
 </html>

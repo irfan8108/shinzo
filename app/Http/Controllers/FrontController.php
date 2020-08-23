@@ -18,6 +18,23 @@ class FrontController extends Controller
 	public function userType(){
 		return view('front.user_type');
 	}
+	public function select(Request $request, $type){
+		switch ($type) {
+			case 'user':
+				return view('front.user_type');
+				break;
+			case 'state':
+				return view('front.select_state');
+				break;
+			case 'market':
+				return view('front.select_market');
+				break;
+			
+			default:
+				dd('Country, India is auto selected');
+				break;
+		}
+	}
 	public function verification(Request $request, $type){
 		switch ($type) {
 			case 'mobile':
@@ -31,6 +48,9 @@ class FrontController extends Controller
 				dd('verification method not defined');
 				break;
 		}
+	}
+	public function basicDetails(){
+		return view('front.verification.basic_details');
 	}
 	public function products(){
 		return view('front.products');
