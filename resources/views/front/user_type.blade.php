@@ -17,8 +17,8 @@
 				<h1 class="quotes">तू कोण आहेस?</h1>
 
 				<div class="select_user_type">
-					<a href="{{ route('verification','mobile') }}" class="Select" data-value="1"><img src="{{ asset('images/supplier.png') }}">Customer</a>
 					<a href="{{ route('verification','mobile') }}" class="Select" data-value="2"><img src="{{ asset('images/customer.png') }}">Supplier</a>
+					<a href="{{ route('verification','mobile') }}" class="Select" data-value="1"><img src="{{ asset('images/supplier.png') }}">Customer</a>
 				</div>
 			</div>
 		</div>

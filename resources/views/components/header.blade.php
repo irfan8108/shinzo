@@ -1,4 +1,4 @@
-<div id="LoadingGif"><center><img src="{{ asset('images/logo_white.png') }}"></center></div>
+<div id="LoadingGif"><center><img src="{{ asset('images/logo.png') }}"></center></div>
 
 <!-- Header Start -->
 <section id="shinzo">
@@ -42,7 +42,7 @@
 	    					</a>
 	    				</li>
 	    				<li>
-	    					<a href="">
+	    					<a href="{{ route('index') }}">
 	    						<i class="fa fa-user"></i> My Account
 	    					</a>
 	    				</li>
@@ -57,7 +57,7 @@
 	      		<div class="bottomNav">
 	      			<div class="col-md-2">
 		        		<div class="logo">
-		        			<a href="{{ route('index') }}"><img src="{{ asset('images/logo.png') }}"></a>
+		        			<a href="{{ route('index') }}"><img src="{{ asset('images/logo_white.png') }}"></a>
 		    			</div>
 		      		</div>
 		      		<div class="col-md-8">
@@ -82,146 +82,110 @@
 					</div>
 	      		</div>
 	    	</div>
+
 	    </div>
 
-	    <nav role='navigation' class="menu">
-  <label for="menu">Menu <i class="fa fa-bars"></i></label>
-  <input type="checkbox" id="menu">
-  <ul>
-    <li><a href="#">My Products</a></li>
-    <li class="menu-hasdropdown">
-      <a href="#">Order Management
-        <label title="toggle menu" for="about">
-          <i class="fa fa-caret-down"></i>
-        </label>
-      </a>
-      <input type="checkbox" id="about">
-		<ul class="menu-dropdown">
-			<li><a href="">Pending Orders</a></li>
-			<li><a href="">Dispatch Order</a></li>
-			<li><a href="">Order Status</a></li>
-			<li><a href="">Order Delivered</a></li>
-		</ul>
-	</li>
-    <li class="menu-hasdropdown">
-      <a href="#">My Account 
-        <label title="toggle menu" for="about">
-          <i class="fa fa-caret-down"></i>
-        </label>
-      </a>
-      <input type="checkbox" id="about">
-		<ul class="menu-dropdown">
-			<li><a href="">My Profile</a></li>
-			<li class="menu-hasdropdown menu-hasflyout">
-			  <a href="">Payment
-			    <label title="toggle menu" for="services">
-			      <i class="fa fa-caret-down menu-downicon"></i>
-			      <i class="fa fa-caret-right menu-righticon"></i>
-			    </label>        
-			  </a>
-			  <input type="checkbox" id="services">
-			  <ul class="menu-dropdown">
-	    		<li><a href="">Bank Details</a></li>
-			    <li><a href="">QR Code</a></li>
-			  </ul>
-			</li>
-			<li><a href="">Subscription</a></li>
-			<li><a href="#">Customers</a></li>
-			<li><a href="">Change Password</a></li>
-		</ul>
-	</li>
-    <li class="menu-hasdropdown">
-      <a href="#">Stock Management 
-        <label title="toggle menu" for="about">
-          <i class="fa fa-caret-down"></i>
-        </label>
-      </a>
-      <input type="checkbox" id="about">
-      <ul class="menu-dropdown">
-        <li class="menu-hasdropdown menu-hasflyout">
-          <a href="">Category
-            <label title="toggle menu" for="services">
-              <i class="fa fa-caret-down menu-downicon"></i>
-              <i class="fa fa-caret-right menu-righticon"></i>
-            </label>        
-          </a>
-          <input type="checkbox" id="services">
-          <ul class="menu-dropdown">
-            <li><a href="">Add New Category</a></li>
-            <li><a href="">List of Categories</a></li>
-          </ul>
-        </li>
-        <li class="menu-hasdropdown menu-hasflyout">
-          <a href="">Product
-            <label title="toggle menu" for="services">
-              <i class="fa fa-caret-down menu-downicon"></i>
-              <i class="fa fa-caret-right menu-righticon"></i>
-            </label>        
-          </a>
-          <input type="checkbox" id="services">
-          <ul class="menu-dropdown">
-            <li><a href="">Add New Product</a></li>
-            <li><a href="">List of Products</a></li>
-          </ul>
-        </li>
-        <li><a href="">Out of Stock</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Enquiries</a></li>
-
-  </ul>
-</nav>
-
-
-
 	</header>
+	
+	<div class="navbar navbar-default" role="navigation">
+		    <div class="container-fluid">
+		        <div class="navbar-header">
+		            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		                <span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		            </button>
+		            <a class="navbar-brand" href="#">
+		            	Supplier
+		            </a>
+		        </div>
+		        <div class="collapse navbar-collapse">
+		            <ul class="nav navbar-nav navbar-right">
+		                <li><a href="https://github.com/irfan8108/shinzo" target="_blank">GitHub Project</a></li>
+		            </ul>
+		            <ul class="nav navbar-nav">
+		                <li class="active"><a href="#">Home</a></li>
+		                <li>
+		                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 1 <b class="caret"></b></a>
+		                    <ul class="dropdown-menu multi-level">
+		                        <li><a href="#">Action</a></li>
+		                        <li><a href="#">Another action</a></li>
+		                        <li><a href="#">Something else here</a></li>
+		                        <li class="divider"></li>
+		                        <li><a href="#">Separated link</a></li>
+		                        <li class="divider"></li>
+		                        <li><a href="#">One more separated link</a></li>
+		                        <li class="dropdown-submenu">
+		                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+		                            <ul class="dropdown-menu">
+		                                <li><a href="#">Action</a></li>
+		                                <li class="dropdown-submenu">
+		                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+		                                    <ul class="dropdown-menu">
+		                                        <li class="dropdown-submenu">
+		                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+		                                            <ul class="dropdown-menu">
+		                                                <li><a href="#">Action</a></li>
+		                                                <li><a href="#">Another action</a></li>
+		                                                <li><a href="#">Something else here</a></li>
+		                                                <li class="divider"></li>
+		                                                <li><a href="#">Separated link</a></li>
+		                                                <li class="divider"></li>
+		                                                <li><a href="#">One more separated link</a></li>
+		                                            </ul>
+		                                        </li>
+		                                    </ul>
+		                                </li>
+		                            </ul>
+		                        </li>
+		                    </ul>
+		                </li>
+		                <li>
+		                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 2 <b class="caret"></b></a>
+		                    <ul class="dropdown-menu">
+		                        <li><a href="#">Action</a></li>
+		                        <li><a href="#">Another action</a></li>
+		                        <li><a href="#">Something else here</a></li>
+		                        <li class="divider"></li>
+		                        <li><a href="#">Separated link</a></li>
+		                        <li class="divider"></li>
+		                        <li><a href="#">One more separated link</a></li>
+		                        <li class="dropdown-submenu">
+		                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+		                            <ul class="dropdown-menu">
+		                                <li><a href="#">Action</a></li>
+		                                <li><a href="#">Another action</a></li>
+		                                <li><a href="#">Something else here</a></li>
+		                                <li class="divider"></li>
+		                                <li><a href="#">Separated link</a></li>
+		                                <li class="divider"></li>
+		                                <li class="dropdown-submenu">
+		                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+		                                    <ul class="dropdown-menu">
+		                                        <li class="dropdown-submenu">
+		                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+		                                            <ul class="dropdown-menu">
+		                                                <li><a href="#">Action</a></li>
+		                                                <li><a href="#">Another action</a></li>
+		                                                <li><a href="#">Something else here</a></li>
+		                                                <li class="divider"></li>
+		                                                <li><a href="#">Separated link</a></li>
+		                                                <li class="divider"></li>
+		                                                <li><a href="#">One more separated link</a></li>
+		                                            </ul>
+		                                        </li>
+		                                    </ul>
+		                                </li>
+		                            </ul>
+		                        </li>
+		                    </ul>
+		                </li>
+		            </ul>
+		        </div><!--/.nav-collapse -->
+		    </div>
+		</div>
+	
 </section>
 
-<header class="fixed">
-	<div class="container">
-		<div class="row">
-  			<div class="col-md-1 col-xs-3">
-        		<div class="logo">
-    				<a href="">
-    					<img src="{{ asset('images/logo.png') }}">
-    				</a>
-    			</div>
-  			</div>
 
-			<div class="col-xs-9 OnlyForMobile">
-				<div class="HeaderLocation">
-			  		<span><b><i class="fa fa-phone"></i></b> +91 999 999 9901 <br><b><i class="fa fa-envelope"></i></b> info@shinzo.com</span>
-				</div>
-			</div>
-
-			<div class="col-md-2 CatBor">
-				<x-header-categories />
-			</div>
-
-			<div class="clear Header OnlyforMobile"></div>
-
-			<div class="col-xs-2 OnlyForMobile">
-        		<a href="javascript:void(0)" class="MobileToggle">
-        			<i class="fa fa-bars" aria-hidden="true"></i>
-        		</a>
-        		<a href="javascript:void(0)" class="MobileToggleClose">
-        			<i class="fa fa-times" aria-hidden="true"></i>
-        		</a>
-      		</div>
-      		<div class="col-md-6 col-xs-10">
-        		<div class="HeaderSearch">
-	          		<input type="text" placeholder="What you are looking for...">
-	          		<input type="submit" value="Search">
-		        </div>
-      		</div>
-	      	<div class="col-md-3 NotForMobile">
-		        <div class="HeaderLocation">
-	          		<!---<span><i class="fa fa-phone"></i></span>-->
-	          		<span><b>Call us:</b> +91 8800 899 998 <br>
-	          		<b>Customer support:</b> info@shinzo.com</span>
-		        </div>
-	      	</div>
-    	</div>
-	</div>
-</header>            
-<!-- Header End -->

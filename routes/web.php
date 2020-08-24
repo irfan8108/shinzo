@@ -32,3 +32,5 @@ Route::get('select/{type}', 'FrontController@select')->name('select');
 
 // SELLER
 Route::get('supplier/welcome', 'SellerController@index')->name('index');
+Route::get('supplier/profile', 'SellerController@profile')->name('profile');
+Route::get('supplier/create/{type}', 'SellerController@create')->name('create');
