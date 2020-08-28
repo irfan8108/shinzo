@@ -14,35 +14,13 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/layout.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/layout_responsive.css') }}">
 
+<link rel="stylesheet" type="text/css" href="{{ asset('css/header.css') }}">
+
 @stack('styles')
 
 </head>
 
 <body class="guest">
-
-<header>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-2">
-				<a href=""><img src="{{ asset('images/logo.png') }}"></a>
-			</div>
-			<div class="col-md-10">
-				<ul>
-					<li>
-						<a href="">
-							<i class="fa fa-facebook"></i>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<i class="fa fa-instagram"></i>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</header>
 
 @yield('content')
 

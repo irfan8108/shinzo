@@ -1,7 +1,7 @@
 <div id="LoadingGif"><center><img src="{{ asset('images/logo.png') }}"></center></div>
 
 <!-- Header Start -->
-<section id="shinzo">
+<section id="header">
 	<header class="Landing" id="StarHere">
 		<div class="container-fluid">
 	    	<div class="row Top">
@@ -87,7 +87,7 @@
 
 	</header>
 	
-	<div class="navbar navbar-default" role="navigation">
+	<!-- <div class="navbar navbar-default" role="navigation">
 		    <div class="container-fluid">
 		        <div class="navbar-header">
 		            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -182,9 +182,9 @@
 		                    </ul>
 		                </li>
 		            </ul>
-		        </div><!--/.nav-collapse -->
+		        </div>
 		    </div>
-		</div>
+		</div> -->
 	
 </section>
 

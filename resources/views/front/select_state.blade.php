@@ -44,7 +44,7 @@
 
 				<section class="ServiceSection">
 					<div class="page-header">
-				        <h3>Featured Sellers
+				        <h3>Select Market
 					   <nav>
 							<ul class="control-box pager">
 								<li><a data-slide="prev" href="#myServiceCarousel" class=""><i class="fa fa-chevron-left"></i></a></li>
@@ -64,8 +64,7 @@
 												<a href="#"><img src="{{ asset('images/seller/seller1.jpg') }}" alt=""></a>
 												</div>
 												<div class="caption">
-													<h4>All-In Garments House</h4>
-													<p>Nullam Condimentum Nibh Etiam Sem</p>
+													<h4>Central Market</h4>
 													<a class="btn btn-mini" href="#">» View Products</a>
 												</div>
 				                            </div>
@@ -76,8 +75,7 @@
 													<a href="#"><img src="{{ asset('images/seller/seller1.jpeg') }}" alt=""></a>
 												</div>
 												<div class="caption">
-													<h4>Redico Fabric Service</h4>
-													<p>Nullam Condimentum Nibh Etiam Sem</p>
+													<h4>Sarojni Nagar Market</h4>
 													<a class="btn btn-mini" href="#">» View Products</a>
 												</div>
 				                            </div>
@@ -88,8 +86,7 @@
 													<a href="#"><img src="{{ asset('images/seller/seller.jpg') }}" alt=""></a>
 												</div>
 												<div class="caption">
-													<h4>Festo Wears</h4>
-													<p>Nullam Condimentum Nibh Etiam Sem</p>
+													<h4>Gandhi Market</h4>
 													<a class="btn btn-mini" href="#">» View Products</a>
 												</div>
 				                            </div>
@@ -100,8 +97,7 @@
 													<a href="#"><img src="{{ asset('images/seller/seller2.jpg') }}" alt=""></a>
 												</div>
 												<div class="caption">
-													<h4>Fasion Wear International</h4>
-													<p>Nullam Condimentum Nibh Etiam Sem</p>
+													<h4>Karol Bagh Market</h4>
 													<a class="btn btn-mini" href="#">» View Products</a>
 												</div>
 				                            </div>
@@ -109,58 +105,6 @@
 				                    </ul>
 				          	</div>
 
-				          	<div class="item">
-				                    <ul class="thumbnails">
-				                        <li class="col-sm-3">
-				    						<div class="fff">
-												<div class="thumbnail">
-												<a href="#"><img src="{{ asset('images/seller/seller1.jpg') }}" alt=""></a>
-												</div>
-												<div class="caption">
-													<h4>All-In Garments House</h4>
-													<p>Nullam Condimentum Nibh Etiam Sem</p>
-													<a class="btn btn-mini" href="#">» View Products</a>
-												</div>
-				                            </div>
-				                        </li>
-				                        <li class="col-sm-3">
-											<div class="fff">
-												<div class="thumbnail">
-													<a href="#"><img src="{{ asset('images/seller/seller1.jpeg') }}" alt=""></a>
-												</div>
-												<div class="caption">
-													<h4>Redico Fabric Service</h4>
-													<p>Nullam Condimentum Nibh Etiam Sem</p>
-													<a class="btn btn-mini" href="#">» View Products</a>
-												</div>
-				                            </div>
-				                        </li>
-				                        <li class="col-sm-3">
-											<div class="fff">
-												<div class="thumbnail">
-													<a href="#"><img src="{{ asset('images/seller/seller.jpg') }}" alt=""></a>
-												</div>
-												<div class="caption">
-													<h4>Festo Wears</h4>
-													<p>Nullam Condimentum Nibh Etiam Sem</p>
-													<a class="btn btn-mini" href="#">» View Products</a>
-												</div>
-				                            </div>
-				                        </li>
-				                        <li class="col-sm-3">
-											<div class="fff">
-												<div class="thumbnail">
-													<a href="#"><img src="{{ asset('images/seller/seller2.jpg') }}" alt=""></a>
-												</div>
-												<div class="caption">
-													<h4>Fasion Wear International</h4>
-													<p>Nullam Condimentum Nibh Etiam Sem</p>
-													<a class="btn btn-mini" href="#">» View Products</a>
-												</div>
-				                            </div>
-				                        </li>
-				                    </ul>
-				          	</div>
 
 				        </div>
 					   <!-- /.control-box -->   

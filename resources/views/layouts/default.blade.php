@@ -14,11 +14,13 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/layout.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/layout_responsive.css') }}">
 
+<link rel="stylesheet" type="text/css" href="{{ asset('css/header.css') }}">
+
 @stack('styles')
 
 </head>
 
-<body class="WithLeftCat">
+<body id="customer" class="WithLeftCat">
 
 <x-header />
 

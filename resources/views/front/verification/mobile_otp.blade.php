@@ -2,7 +2,10 @@
 
 @section('content')
 
+<x-guest-header />
+
 <div class="container">
+
 		<div class="LogSignBox mobile_verification">
 			<div class="row">
 
@@ -21,14 +24,14 @@
 				</div>
 
 				<div class="form-group">
-					<a href="">Change Number</a>
+					<a href="{{ route('verification','mobile') }}">Change Number</a>
 					<a href="" class="pull-right">Resend OTP</a>
 					<br>
 				</div>
 
 				<div class="form-group">
 					<!-- <input type="submit" value="Verify" class="form-control btn btn-primary"> -->
-					<a href="{{ route('basic_details') }}" class="form-control btn btn-primary">Verify</a>
+					<a href="{{ route('index') }}" class="form-control btn btn-primary">Verify</a>
 				</div>
 
 	      	</form>

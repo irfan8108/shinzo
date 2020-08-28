@@ -20,9 +20,11 @@
 
 </head>
 
-<body class="WithLeftCat">
+<body id="seller" class="WithLeftCat">
 
-<x-header />
+<span id="StarHere"></span>
+
+<x-seller-header />
 
 @yield('content')
 

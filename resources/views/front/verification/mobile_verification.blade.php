@@ -2,21 +2,29 @@
 
 @section('content')
 
-<div class="container">
-		<div class="LogSignBox mobile_verification">
-			<div class="row">
+<x-guest-header />
 
+<div class="container">
+
+	<div class="LogSignBox mobile_verification">
+		<div class="row">
       		<form>
 	      		<center>
-	      			<img src="{{ asset('images/mob_verification.png') }}" style="width: 50%">
-					<h4>Verify Your Mobile</h4>
+	      			<!-- <img src="{{ asset('images/mob_verification.png') }}" style="width: 50%"> -->
+	      			<img src="{{ asset('images/whatsapp.png') }}" style="width: 35%">
+					<h4>Verify With Whatsapp</h4>
 					<p>
-						Enter your mobile number to verify you.
+						Enter below details to verify you.
 					</p>
 	      		</center>
 
+	      		<div class="form-group">
+	      			<label>Company Name</label>
+	      			<input type="text" class="form-control" placeholder="Company Name">
+	      		</div>
+
 				<div class="form-group">
-					<br>
+					<label>Mobile Number</label>
 					<input id="phone" type="tel" class="form-control">
 					<span id="valid-msg" class="hide">Valid</span>
 					<span id="error-msg" class="hide">Invalid number</span>
@@ -26,7 +34,6 @@
 					<!-- <input type="submit" value="Proceed" class="form-control btn btn-primary"> -->
 					<a href="{{ route('verification','otp') }}" class="form-control btn btn-primary">Proceed</a>
 				</div>
-
 	      	</form>
 		</div>
 	</div>

@@ -2,194 +2,457 @@
 
 @section('content')
 
-
-<!-- Popup for enquiry -->
-  <div class="modal fade" id="enquiryModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title" id="EnquiryModalHeading">Product Name</h4>
-        </div>
-
-        <form>
-
-        <input type="hidden" id="txtUserId" name="txtUserId" value="">
-        <input type="hidden" id="txtProductId" name="txtProductId" value="">
-        <div class="modal-body">
-          <p>Please fill the below form to,<br>
-          <b>Get a <span class="txt-orange">call back</span> or <span class="txt-orange">quotation</span> for such product by related seller</b><hr>
-          	<div class="row">
-          		<div class="col-md-12">
-
-          			<!-- <div class="row">
-      					<div class="col-md-1">
-      					<span class="inputIcon"><i class="fa fa-user"></i></span>
-	      				</div>
-		          		<div class="col-md-3" style="padding: 0">
-			          		<select class="form-control " name="txtUserType">
-				          		
-				          		@if (empty(session()->get('userId')))
-					          		<option value="Guest" selected="">Guest</option>
-				          		@else
-				          			{{ $usr = session()->get('userType') == 1 ? "Seller" : "Buyer" }}
-					          		<option value="{{ session()->get('userType') }}">{{ $usr }}</option>
-					          		
-				          		@endif
-
-			          		</select>
-		          		</div>
-          			</div> -->
-
-					<div class="row">
-      					<div class="col-md-12">
-      						<div class="form-group">
-      							<label>Email Address</label>
-			          			<input class="form-control validate[required, custom[email]]" data-errormessage-value-missing="Please enter your email address." data-errormessage-custom-error="Please enter a valid email address." type="text" placeholder="Enter your email address" name="txtUserEmail" id="txtUserEmail" value="{{ session()->get('userEmail') }}" >
-      						</div>
-	          			</div>
-      				</div>
-
-      				<div class="row">
-		          		<div class="col-md-12">
-		          			<div class="form-group">
-		          				<label>Name</label>
-			          				<input class="form-control validate[required]" data-errormessage-value-missing="Please enter your full name." type="text" placeholder="Enter your name" name="txtUserName" id="txtUserName" value="{{ session()->get('userName') }}" disabled="">
-		          			</div>
-	          			</div>
-      				</div>
-
-      				<div class="row">
-      					<div class="col-md-12">
-    						<div class="form-group">
-	  							<label>Contact Number</label>
-		          				<input class="form-control validate[required]" data-errormessage-value-missing="Please enter your contact number." type="text" placeholder="Enter your contact number" name="txtUserContact" id="txtUserContact" value="{{ session()->get('userMobile') }}" disabled="">
-    						</div>
-	          			</div>
-      				</div>
-
-      				<div class="row">
-      					<div class="col-md-12">
-      						<label>Comment / Message <span>(optional)</span></label>
-		          			<textarea placeholder="Type your message.." class="form-control" name="txtMessage" id="txtMessage" disabled=""></textarea>
-	          			</div>
-      				</div>
-
-      		 	</div>
-      		</div>
-        </div>
-        <div class="modal-footer">
-            <div class="row">
-				<div class="col-md-12">
-					<input type="submit" name="btnEnquiry" value="Send Now!" class="btn btn-success">
-					<button type="button" id="ClosePopup" class="btn btn-default" data-dismiss="modal">Cancel</button>
-  				</div>
-			</div>
-        </div>
-    	
-</form>
-
-      </div>
-      
-    </div>
-  </div>
-
 <div class="container">
-		<div class="row">
-			<div class="col-md-12 CatLeftBar">
+	<div class="row">
 
-				<div class="PageNavigation">
-					<h1>Product Name</h1>
-					<a href=""><i class="fa fa-home"></i> Business Directory</a> <i class="fa fa-angle-right"></i>
-					<a href="">Category Name</a> <i class="fa fa-angle-right"></i>
-					<a href="">Sub Category Name</a> <i class="fa fa-angle-right"></i>
-					Product Name
-				</div>
 
-<div class="row">
-<div class="col-md-3">
-	Filters
-</div>
-
-<div class="col-md-9 LeftZeroPad">
-	<div id="wrapper">
-
-<div id="response"></div>
-
-<?php # if(!empty($SellersList)){ ?>
-		<div id="columns" class="Prod">
+		<div class="col-md-3">
 			
-				<!-- <div class="pin featured"> -->
-				<div class="pin">
-					<div class="PImage">
-						<img src="{{ asset('images/dhotikurta2.jpg') }}" />
-					</div>
-					<div class="PDetail">
-						<h1><a href=""><b>Product Name</b></a></h1>
-						<p>
-							<span>
-								ProductDetails.....ProductDetails...ProductDetails
-							</span>
-						<a href="productdetails"> read more...</a></p>
-						<hr>
-						<span class="MobileNumber">+91-XXXXXXX998 <a href="signup.php" data-toggle="tooltip" title="You need to register to access seller information!">View</a></span>
-
-						<!-- Sending data to EnquiryProduct() function to set enquiry popup --> 
-						<span onclick="EnquiryProduct('ProductName', 'CategoryName', 'SellerID', 'ProductID')" data-toggle="modal" data-target="#enquiryModal" class="SendEnquiry"><a href="javascript:void(0)">Send Enquiry</a></span>
-
-					</div>
-					<div class="PFooter">
-						<h1>Astu Fashion Apparels</h1>
-						<p><i class="fa fa-map-marker"></i> G-72, Sector 63, Noida Uttarpradesh, Pin - 201301</p>
-						<p><i class="fa fa-globe"></i> <a target="_blank" href="http://www.gofrescoo.com">www.gofrescoo.com/astu230</a></p>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="cover_pic">
+						<img src="{{ asset('images/cover.jpg') }}">
 					</div>
 				</div>
+			</div>
 
-				<div class="pin">
-					<div class="PImage">
-						<img src="{{ asset('images/dhotikurta6.jpg') }}" />
-					</div>
-					<div class="PDetail">
-						<h1><a href=""><b>Product Name</b></a></h1>
-						<p>
-							<span>
-								ProductDetails.....ProductDetails... ProductDetails
-							</span>
-						<a href="productdetails"> read more...</a></p>
-						<hr>
-						<span class="MobileNumber">+91-XXXXXXX998 <a href="signup.php" data-toggle="tooltip" title="You need to register to access seller information!">View</a></span>
+			<div class="row">
+				<div class="col-md-12">
+					<button type="button" class="btn btn-default seller_name">
+						<img src="{{ asset('images/supplier.png') }}" width="20px"> Maruti Enterprises & Sons Private Limited
+					</button>
 
-						<!-- Sending data to EnquiryProduct() function to set enquiry popup --> 
-						<span onclick="EnquiryProduct('ProductName', 'CategoryName', 'SellerID', 'ProductID')" data-toggle="modal" data-target="#enquiryModal" class="SendEnquiry"><a href="javascript:void(0)">Send Enquiry</a></span>
+					<center>
+						<h4>
+							<i class="fa fa-map-marker"></i> Central Market, Delhi
+						</h4>
+					</center>
 
-					</div>
-					<div class="PFooter">
-						<h1>Astu Fashion Apparels</h1>
-						<p><i class="fa fa-map-marker"></i> G-72, Sector 63, Noida Uttarpradesh, Pin - 201301</p>
-						<p><i class="fa fa-globe"></i> <a target="_blank" href="http://www.gofrescoo.com">www.gofrescoo.com/astu230</a></p>
-					</div>
 				</div>
-
+			</div>
 		</div>
 
-<?php # }
-#else
-#	{ echo "<h3 class='alert alert-warning'>Ooops, No product found!</h3>
-#<a href='".$BackUrl."'><i class='fa fa-reply'></i> Back</a> | <a href="">Go to Home</a><br><br>
-#"; }
-?>
 
+		<div class="col-md-9">
+			
+			<div class="row">
+				<div class="col-md-12">
+					<div class="cover_pic">
+						<img src="{{ asset('images/cover.jpg') }}">
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+
+				<div class="col-md-6">
+					<div class="product">
+					    <div class="title">
+					      AF VR ZOOM-NIKKOR 80-400MM
+					    </div>
+					    
+					    <div class="text">
+					      	<div class="code">Minimum Order: <b>5 Pcs.</b></div>
+							<div class="description">
+								The ultimate medium to super-telephoto zoom lens.
+							</div>
+							<div class="price mrp">
+								<del><i class="fa fa-inr"></i> 75000</del>
+							</div> 
+							<div class="price offer">
+								<i class="fa fa-inr"></i> 50000
+								<p>(Your saving 25%)</p>
+							</div>
+							<div class="shop-actions">
+					        	<button>View in Details</button>
+				      		</div>
+					    </div>
+					    
+					    <div class="preview">
+					      	<svg class="svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+					        	<circle class="circle" cx="100" cy="100" r="100"/>
+				        		<image class="image" xlink:href="http://cdn-4.nikon-cdn.com/e/Q5NM96RZZo-fTYlSZPBjlMhlFa1VHARsAMnUXr0r65W8XOJsHIQxeq_m3jcWAnFaskzdz7WzoICu9qJNoS76YW3Qa7aSB9_ky28ht1Iw6dE=/Views/1996_AF-VR-Zoom-NIKKOR-80-400mm-f4.5-5.6D_Product.png" x="0" y="0" width="200px" height="180px"/>
+				      		</svg>
+				    	</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="product">
+					    <div class="title">
+					      AF VR ZOOM-NIKKOR 80-400MM
+					    </div>
+					    
+					    <div class="text">
+					      	<div class="code">Minimum Order: <b>5 Pcs.</b></div>
+							<div class="description">
+								The ultimate medium to super-telephoto zoom lens.
+							</div>
+							<div class="price mrp">
+								<del><i class="fa fa-inr"></i> 75000</del>
+							</div> 
+							<div class="price offer">
+								<i class="fa fa-inr"></i> 50000
+								<p>(Your saving 25%)</p>
+							</div>
+							<div class="shop-actions">
+					        	<button>View in Details</button>
+				      		</div>
+					    </div>
+					    
+					    <div class="preview">
+					      	<svg class="svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+					        	<circle class="circle" cx="100" cy="100" r="100"/>
+				        		<image class="image" xlink:href="http://cdn-4.nikon-cdn.com/e/Q5NM96RZZo-fTYlSZPBjlMhlFa1VHARsAMnUXr0r65W8XOJsHIQxeq_m3jcWAnFaskzdz7WzoICu9qJNoS76YW3Qa7aSB9_ky28ht1Iw6dE=/Views/1996_AF-VR-Zoom-NIKKOR-80-400mm-f4.5-5.6D_Product.png" x="0" y="0" width="200px" height="180px"/>
+				      		</svg>
+				    	</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="product">
+					    <div class="title">
+					      AF VR ZOOM-NIKKOR 80-400MM
+					    </div>
+					    
+					    <div class="text">
+					      	<div class="code">Minimum Order: <b>5 Pcs.</b></div>
+							<div class="description">
+								The ultimate medium to super-telephoto zoom lens.
+							</div>
+							<div class="price mrp">
+								<del><i class="fa fa-inr"></i> 75000</del>
+							</div> 
+							<div class="price offer">
+								<i class="fa fa-inr"></i> 50000
+								<p>(Your saving 25%)</p>
+							</div>
+							<div class="shop-actions">
+					        	<button>View in Details</button>
+				      		</div>
+					    </div>
+					    
+					    <div class="preview">
+					      	<svg class="svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+					        	<circle class="circle" cx="100" cy="100" r="100"/>
+				        		<image class="image" xlink:href="http://cdn-4.nikon-cdn.com/e/Q5NM96RZZo-fTYlSZPBjlMhlFa1VHARsAMnUXr0r65W8XOJsHIQxeq_m3jcWAnFaskzdz7WzoICu9qJNoS76YW3Qa7aSB9_ky28ht1Iw6dE=/Views/1996_AF-VR-Zoom-NIKKOR-80-400mm-f4.5-5.6D_Product.png" x="0" y="0" width="200px" height="180px"/>
+				      		</svg>
+				    	</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="product">
+					    <div class="title">
+					      AF VR ZOOM-NIKKOR 80-400MM
+					    </div>
+					    
+					    <div class="text">
+					      	<div class="code">Minimum Order: <b>5 Pcs.</b></div>
+							<div class="description">
+								The ultimate medium to super-telephoto zoom lens.
+							</div>
+							<div class="price mrp">
+								<del><i class="fa fa-inr"></i> 75000</del>
+							</div> 
+							<div class="price offer">
+								<i class="fa fa-inr"></i> 50000
+								<p>(Your saving 25%)</p>
+							</div>
+							<div class="shop-actions">
+					        	<button>View in Details</button>
+				      		</div>
+					    </div>
+					    
+					    <div class="preview">
+					      	<svg class="svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+					        	<circle class="circle" cx="100" cy="100" r="100"/>
+				        		<image class="image" xlink:href="http://cdn-4.nikon-cdn.com/e/Q5NM96RZZo-fTYlSZPBjlMhlFa1VHARsAMnUXr0r65W8XOJsHIQxeq_m3jcWAnFaskzdz7WzoICu9qJNoS76YW3Qa7aSB9_ky28ht1Iw6dE=/Views/1996_AF-VR-Zoom-NIKKOR-80-400mm-f4.5-5.6D_Product.png" x="0" y="0" width="200px" height="180px"/>
+				      		</svg>
+				    	</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="product">
+					    <div class="title">
+					      AF VR ZOOM-NIKKOR 80-400MM
+					    </div>
+					    
+					    <div class="text">
+					      	<div class="code">Minimum Order: <b>5 Pcs.</b></div>
+							<div class="description">
+								The ultimate medium to super-telephoto zoom lens.
+							</div>
+							<div class="price mrp">
+								<del><i class="fa fa-inr"></i> 75000</del>
+							</div> 
+							<div class="price offer">
+								<i class="fa fa-inr"></i> 50000
+								<p>(Your saving 25%)</p>
+							</div>
+							<div class="shop-actions">
+					        	<button>View in Details</button>
+				      		</div>
+					    </div>
+					    
+					    <div class="preview">
+					      	<svg class="svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+					        	<circle class="circle" cx="100" cy="100" r="100"/>
+				        		<image class="image" xlink:href="http://cdn-4.nikon-cdn.com/e/Q5NM96RZZo-fTYlSZPBjlMhlFa1VHARsAMnUXr0r65W8XOJsHIQxeq_m3jcWAnFaskzdz7WzoICu9qJNoS76YW3Qa7aSB9_ky28ht1Iw6dE=/Views/1996_AF-VR-Zoom-NIKKOR-80-400mm-f4.5-5.6D_Product.png" x="0" y="0" width="200px" height="180px"/>
+				      		</svg>
+				    	</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="product">
+					    <div class="title">
+					      AF VR ZOOM-NIKKOR 80-400MM
+					    </div>
+					    
+					    <div class="text">
+					      	<div class="code">Minimum Order: <b>5 Pcs.</b></div>
+							<div class="description">
+								The ultimate medium to super-telephoto zoom lens.
+							</div>
+							<div class="price mrp">
+								<del><i class="fa fa-inr"></i> 75000</del>
+							</div> 
+							<div class="price offer">
+								<i class="fa fa-inr"></i> 50000
+								<p>(Your saving 25%)</p>
+							</div>
+							<div class="shop-actions">
+					        	<button>View in Details</button>
+				      		</div>
+					    </div>
+					    
+					    <div class="preview">
+					      	<svg class="svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+					        	<circle class="circle" cx="100" cy="100" r="100"/>
+				        		<image class="image" xlink:href="http://cdn-4.nikon-cdn.com/e/Q5NM96RZZo-fTYlSZPBjlMhlFa1VHARsAMnUXr0r65W8XOJsHIQxeq_m3jcWAnFaskzdz7WzoICu9qJNoS76YW3Qa7aSB9_ky28ht1Iw6dE=/Views/1996_AF-VR-Zoom-NIKKOR-80-400mm-f4.5-5.6D_Product.png" x="0" y="0" width="200px" height="180px"/>
+				      		</svg>
+				    	</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="product">
+					    <div class="title">
+					      AF VR ZOOM-NIKKOR 80-400MM
+					    </div>
+					    
+					    <div class="text">
+					      	<div class="code">Minimum Order: <b>5 Pcs.</b></div>
+							<div class="description">
+								The ultimate medium to super-telephoto zoom lens.
+							</div>
+							<div class="price mrp">
+								<del><i class="fa fa-inr"></i> 75000</del>
+							</div> 
+							<div class="price offer">
+								<i class="fa fa-inr"></i> 50000
+								<p>(Your saving 25%)</p>
+							</div>
+							<div class="shop-actions">
+					        	<button>View in Details</button>
+				      		</div>
+					    </div>
+					    
+					    <div class="preview">
+					      	<svg class="svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+					        	<circle class="circle" cx="100" cy="100" r="100"/>
+				        		<image class="image" xlink:href="http://cdn-4.nikon-cdn.com/e/Q5NM96RZZo-fTYlSZPBjlMhlFa1VHARsAMnUXr0r65W8XOJsHIQxeq_m3jcWAnFaskzdz7WzoICu9qJNoS76YW3Qa7aSB9_ky28ht1Iw6dE=/Views/1996_AF-VR-Zoom-NIKKOR-80-400mm-f4.5-5.6D_Product.png" x="0" y="0" width="200px" height="180px"/>
+				      		</svg>
+				    	</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="product">
+					    <div class="title">
+					      AF VR ZOOM-NIKKOR 80-400MM
+					    </div>
+					    
+					    <div class="text">
+					      	<div class="code">Minimum Order: <b>5 Pcs.</b></div>
+							<div class="description">
+								The ultimate medium to super-telephoto zoom lens.
+							</div>
+							<div class="price mrp">
+								<del><i class="fa fa-inr"></i> 75000</del>
+							</div> 
+							<div class="price offer">
+								<i class="fa fa-inr"></i> 50000
+								<p>(Your saving 25%)</p>
+							</div>
+							<div class="shop-actions">
+					        	<button>View in Details</button>
+				      		</div>
+					    </div>
+					    
+					    <div class="preview">
+					      	<svg class="svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+					        	<circle class="circle" cx="100" cy="100" r="100"/>
+				        		<image class="image" xlink:href="http://cdn-4.nikon-cdn.com/e/Q5NM96RZZo-fTYlSZPBjlMhlFa1VHARsAMnUXr0r65W8XOJsHIQxeq_m3jcWAnFaskzdz7WzoICu9qJNoS76YW3Qa7aSB9_ky28ht1Iw6dE=/Views/1996_AF-VR-Zoom-NIKKOR-80-400mm-f4.5-5.6D_Product.png" x="0" y="0" width="200px" height="180px"/>
+				      		</svg>
+				    	</div>
+					</div>
+				</div>				
+
+
+			</div>			
+		</div>
 
 	</div>
 </div>
-</div>
-
-				
-			</div>
-
-		</div>
-</div>
 
 @endsection
+
+@push('styles')
+<style type="text/css">
+	.product {
+	  position: relative;
+	  width: 100%;
+	  background-color: #fff;
+	  margin: auto;
+	  overflow: hidden;
+	  margin-top: 25px;
+	}
+	.product > div {
+	  position: relative;
+	  z-index: 10;
+	}
+	.product .title {
+	  background-color: #333;
+	  color: #fff;
+	  padding: 10px;
+	  font-size: 18px;
+	  z-index: 20;
+	}
+	.product .text {
+	  text-align: left;
+	  width: 49.5%;
+	  display: inline-block;
+	  vertical-align: middle;
+	  /*color: #333;*/
+	  font-weight: 300;
+	  padding: 20px 0;
+	}
+	.price p {
+	    color: green;
+	    font-size: 15px;
+	}
+	.price.mrp del {
+	    color: orangered;
+	}
+	.product .text .code {
+	  padding: 0 20px;
+	  font-size: 12px;
+	  font-weight: 700;
+	  margin-bottom: 5px;
+	}
+	.product .text .description {
+	  padding: 0 20px;
+	  margin-bottom: 10px;
+	  color: #757575;
+	}
+	.product .text .review {
+	  font-size: 12px;
+	  padding: 0 20px;
+	}
+	.product .text .review > span {
+	  vertical-align: middle;
+	}
+	.product .text .review > span.star-icon {
+	  width: 20px;
+	  height: 20px;
+	  display: inline-block;
+	}
+	.product .text .review .star-icon {
+	  background-image: url(https://cdn4.iconfinder.com/data/icons/small-n-flat/24/star-20.png);
+	}
+	.product .text .review .star-disable {
+	  opacity: 0.5;
+	}
+	.product .text .price {
+	  padding: 0 20px;
+	  font-size: 17px;
+	  margin-bottom: 0px;
+	}
+	.product .text .shop-actions {
+	  padding: 0 20px;
+	}
+	.product .text .shop-actions button {
+	  width: 100%;
+	  vertical-align: middle;
+	  background-color: #ffdd00;
+	  border: none;
+	  box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.5);
+	  padding: 5px;
+	  font-size: 18px;
+	  font-family: "Oswald";
+	}
+	.product .preview {
+	  width: 49.5%;
+	  display: inline-block;
+	  vertical-align: middle;
+	  height: 240px;
+	}
+	.product .svg {
+	  position: absolute;
+	  width: 100%;
+	  left: 0;
+	  top: 0;
+	  height: 100%;
+	  z-index: 0;
+	}
+	.product .svg .circle {
+	  fill: #ccc;
+	  transform-origin: 50% 50%;
+	  -webkit-transform: scale(0.8);
+	  -moz-transform: scale(0.8);
+	  -ms-transform: scale(0.8);
+	  -o-transform: scale(0.8);
+	  transform: scale(0.8);
+	  -webkit-transition: transform 300ms;
+	  -moz-transition: transform 300ms;
+	  -ms-transition: transform 300ms;
+	  -o-transition: transform 300ms;
+	  transition: transform 300ms;
+	}
+	.product .svg .image {
+	  transform-origin: 50% 50%;
+	  -webkit-transform: rotate(0);
+	  -moz-transform: rotate(0);
+	  -ms-transform: rotate(0);
+	  -o-transform: rotate(0);
+	  transform: rotate(0);
+	  -webkit-transition: transform 300ms;
+	  -moz-transition: transform 300ms;
+	  -ms-transition: transform 300ms;
+	  -o-transition: transform 300ms;
+	  transition: transform 300ms;
+	}
+	.product:hover .preview .image {
+	  -webkit-transform: rotate(20deg);
+	  -moz-transform: rotate(20deg);
+	  -ms-transform: rotate(20deg);
+	  -o-transform: rotate(20deg);
+	  transform: rotate(20deg);
+	}
+	.product:hover .preview .circle {
+	  -webkit-transform: scale(1);
+	  -moz-transform: scale(1);
+	  -ms-transform: scale(1);
+	  -o-transform: scale(1);
+	  transform: scale(1);
+	}
+	.price.offer{color: green}
+</style>
+@endpush
+
+@push('scripts')
+@endpush
