@@ -31,14 +31,14 @@
 					      <div class="panel-heading" role="tab" id="headingOne">
 					        <h4 class="panel-title">
 					        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-					          My Online Store
+					          My Online Store <span class="label label-warning">Complete Your Profile</span>
 					        </a>
 					      </h4>
 					      </div>
 					      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 					        <div class="panel-body">
 				          	
-				          		<button onclick="redirect({{ route('create','store') }})" type="button" class="btn btn-default">Create Your First Online Store</a> <i class="fa fa-plus-circle"></i></button>
+				          		<button type="button" class="btn btn-default link" data-value="{{ route('create','store') }}">Create Your First Online Store</a> <i class="fa fa-plus-circle"></i></button>
 
 				          		<button type="button" class="btn btn-default">View Stores</button>
 
@@ -49,14 +49,14 @@
 					    <div class="panel panel-default shnzo_accordian">
 					      <div class="panel-heading" role="tab" id="headingTwo">
 					        <h4 class="panel-title">
-					        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+					        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
 					          My Product
 					        </a>
 					      </h4>
 					      </div>
-					      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					      <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
 					        <div class="panel-body">
-					        	<button type="button" class="btn btn-default" onclick="redirect({{ route('create','product') }})">Add Product</button>
+					        	<button type="button" class="btn btn-default link" data-value="{{ route('create','product') }}">Add Product</button>
 					        	<button type="button" class="btn btn-default">Add Related Images</button>
 					        	<button type="button" class="btn btn-default">View Products</button>
 					        </div>
@@ -66,17 +66,15 @@
 					    <div class="panel panel-default shnzo_accordian">
 					      <div class="panel-heading" role="tab" id="promocode">
 					        <h4 class="panel-title">
-					        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsethree" aria-expanded="false" aria-controls="collapsethree">
+					        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
 					          Promocode/Offer
 					        </a>
 					      </h4>
 					      </div>
-					      <div id="collapsethree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="promocode">
+					      <div id="collapsethree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="promocode">
 					        <div class="panel-body">
-					        	<button type="button" class="btn btn-default">Add Promocode</button>
-					        	<button type="button" class="btn btn-default">View Promocode</button>
-					        	<button type="button" class="btn btn-default">Used Promocode</button>
-					        	<button type="button" class="btn btn-default">Expired Promocode</button>
+					        	<button type="button" class="btn btn-default link" data-value="{{ route('create','promocode') }}">Add Promocode</button>
+					        	<button type="button" class="btn btn-default link" data-value="{{ route('view','promocode') }}">View Promocode</button>
 					        </div>
 					      </div>
 					    </div>
@@ -84,30 +82,16 @@
 					    <div class="panel panel-default shnzo_accordian">
 					      <div class="panel-heading" role="tab" id="orders">
 					        <h4 class="panel-title">
-					        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+					        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
 					          Orders <span class="badge warning">7</span>
 					        </a>
 					      </h4>
 					      </div>
-					      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="orders">
+					      <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="orders">
 					        <div class="panel-body">
 								<button type="button" class="btn btn-warning">Pending Orders <span class="badge">7</span></button>
-								<button type="button" class="btn btn-success">Delivered Orders</button>
-					        </div>
-					      </div>
-					    </div>
-
-					    <div class="panel panel-default shnzo_accordian">
-					      <div class="panel-heading" role="tab" id="account">
-					        <h4 class="panel-title">
-					        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-					          My Account <span class="label label-warning">Complete Your Profile</span>
-					        </a>
-					      </h4>
-					      </div>
-					      <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="account">
-					        <div class="panel-body">
-								<button type="button" class="btn btn-default">Registration Details</button>
+								<button type="button" class="btn btn-success">Complete Orders</button>
+								<button type="button" class="btn btn-danger">Hold Order (Incomplete Orders)</button>
 					        </div>
 					      </div>
 					    </div>
@@ -115,15 +99,16 @@
 					    <div class="panel panel-default shnzo_accordian">
 					      <div class="panel-heading" role="tab" id="payments">
 					        <h4 class="panel-title">
-					        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-					          Payments <span class="label label-danger">Add Payment Details</span>
+					        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+					          Payments
 					        </a>
 					      </h4>
 					      </div>
-					      <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="payments">
+					      <div id="collapseSix" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="payments">
 					        <div class="panel-body">
-								<button type="button" class="btn btn-default">Upload eWallet Barcode</button>
-								<button type="button" class="btn btn-default">Add Bank Details</button>
+								<button type="button" class="btn btn-default">UPI / RazerPay / Scan Code</button>
+								<button type="button" class="btn btn-default">Payment Status</button>
+								<button type="button" class="btn btn-default">Wired Payment</button>
 					        </div>
 					      </div>
 					    </div>
@@ -197,3 +182,11 @@
 @endsection
 
 @include('seller.inc.data_entry')
+
+@push('scripts')
+	<script type="text/javascript">
+		$('.link').on('click', function(){
+			window.location.href=$(this).attr('data-value');
+		})
+	</script>
+@endpush

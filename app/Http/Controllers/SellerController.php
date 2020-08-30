@@ -13,17 +13,9 @@ class SellerController extends Controller
 		return view('seller.profile');
 	}
 	public function create($type){
-		switch ($type) {
-			case 'store':
-				return view('seller.create.store');
-				break;
-			case 'product':
-				return view('seller.create.product');
-				break;
-			
-			default:
-				dd('create type not defined');
-				break;
-		}
+		return view('seller.create.'.$type);
+	}
+	public function view($type){
+		return view('seller.view.'.$type);
 	}
 }
