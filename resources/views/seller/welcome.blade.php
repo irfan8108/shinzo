@@ -38,9 +38,9 @@
 					      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 					        <div class="panel-body">
 				          	
-				          		<button type="button" class="btn btn-default link" data-value="{{ route('create','store') }}">Create Your First Online Store</a> <i class="fa fa-plus-circle"></i></button>
+				          		<button type="button" class="btn btn-default link" data-value="{{ route('create','store') }}">Create Your Online Store</a> <i class="fa fa-plus-circle"></i></button>
 
-				          		<button type="button" class="btn btn-default">View Stores</button>
+				          		<button type="button" class="btn btn-default">My Store</button>
 
 					        </div>
 					      </div>
