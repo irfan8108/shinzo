@@ -13,10 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('demo', function(){
+	return view('front.demo');
+});
+
 Route::get('/', 'FrontController@userType')->name('whoU');
 // Route::get('user_type', 'FrontController@userType')->name('user_type');
-Route::get('welcome', 'FrontController@index')->name('index');
-Route::get('verification/{type}', 'FrontController@verification')->name('verification');
+Route::get('welcome/{marketID?}/{marketName?}', 'FrontController@index')->name('b.index');
+Route::match(['get','post'],'verification/{type}', 'FrontController@verification')->name('verification');
 Route::get('basic_details', 'FrontController@basicDetails')->name('basic_details');
 Route::get('category', 'FrontController@category')->name('category');
 Route::get('categories', 'FrontController@categories')->name('categories');
@@ -28,10 +32,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // COMMOM
-Route::get('select/{type}', 'FrontController@select')->name('select');
+Route::get('select/{type}/{cmd?}', 'FrontController@select')->name('select');
 
 // SELLER
-Route::get('supplier/welcome', 'SellerController@index')->name('index');
+Route::get('supplier/welcome', 'SellerController@index')->name('s.index');
 Route::get('supplier/profile', 'SellerController@profile')->name('profile');
-Route::get('supplier/create/{type}', 'SellerController@create')->name('create');
+Route::match(['get', 'post'], 'supplier/create/{type}', 'SellerController@create')->name('create');
+Route::match(['get', 'post'], 'supplier/update/{type}', 'SellerController@update')->name('update');
 Route::get('supplier/view/{type}', 'SellerController@view')->name('view');

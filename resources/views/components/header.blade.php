@@ -42,7 +42,7 @@
 	    					</a>
 	    				</li>
 	    				<li>
-	    					<a href="{{ route('index') }}">
+	    					<a href="{{ route('b.index') }}">
 	    						<i class="fa fa-user"></i> My Account
 	    					</a>
 	    				</li>
@@ -57,7 +57,7 @@
 	      		<div class="bottomNav">
 	      			<div class="col-md-2">
 		        		<div class="logo">
-		        			<a href="{{ route('index') }}"><img src="{{ asset('images/logo_white.png') }}"></a>
+		        			<a href="{{ route('b.index') }}"><img src="{{ asset('images/logo_white.png') }}"></a>
 		    			</div>
 		      		</div>
 		      		<div class="col-md-8">

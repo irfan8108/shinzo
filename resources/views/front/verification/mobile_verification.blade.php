@@ -8,7 +8,8 @@
 
 	<div class="LogSignBox mobile_verification">
 		<div class="row">
-      		<form>
+      		<form action="{{ route('verification', 'otp') }}" method="post" autocomplete="off">
+      			@csrf
 	      		<center>
 	      			<!-- <img src="{{ asset('images/mob_verification.png') }}" style="width: 50%"> -->
 	      			<img src="{{ asset('images/whatsapp.png') }}" style="width: 35%">
@@ -18,21 +19,21 @@
 					</p>
 	      		</center>
 
-	      		<div class="form-group">
+	      		<div class="form-group @error('name') has-error @enderror">
 	      			<label>Company Name</label>
-	      			<input type="text" class="form-control" placeholder="Company Name">
+	      			<input type="text" class="form-control" name="name" placeholder="Company Name" value="{{ old('name') }}">
 	      		</div>
 
-				<div class="form-group">
+				<div class="form-group @error('mobile') has-error @enderror">
 					<label>Mobile Number</label>
-					<input id="phone" type="tel" class="form-control">
+					<input id="phone" type="tel" class="form-control" name="mobile" value="{{ old('mobile') }}">
 					<span id="valid-msg" class="hide">Valid</span>
 					<span id="error-msg" class="hide">Invalid number</span>
 				</div>
 
 				<div class="form-group">
-					<!-- <input type="submit" value="Proceed" class="form-control btn btn-primary"> -->
-					<a href="{{ route('verification','otp') }}" class="form-control btn btn-primary">Proceed</a>
+					<input type="submit" value="Proceed" class="form-control btn btn-primary">
+					<!-- <a href="{{ route('verification','otp') }}" class="form-control btn btn-primary">Proceed</a> -->
 				</div>
 	      	</form>
 		</div>

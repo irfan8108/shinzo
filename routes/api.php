@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('getMarkets/{cityID}/{status?}', 'ProcessController@getMarkets');
+Route::get('getCitiesByState/{statesID}/{status?}', 'ProcessController@getCitiesByState');
+Route::get('getMarketsByCity/{cityID}/{status?}', 'ProcessController@getMarketsByCity');
+Route::get('getTagsByCategory/{categoryID}/{status?}', 'ProcessController@getTagsByCategory');

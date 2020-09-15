@@ -33,8 +33,9 @@
 <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/bootstrap.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/common.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/common_scripts.js') }}"></script>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	
 (function(window) {
 
@@ -334,7 +335,7 @@
 })(window);
 
 new mlPushMenu(document.getElementById('mp-menu'), document.getElementById('trigger'));
-</script>
+</script> -->
 
 @stack('scripts')
 

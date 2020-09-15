@@ -11,21 +11,28 @@
 
 				<div class="LeftMenu">
 					<ul>
-						<li class="Heading"><i class="fa fa-list"></i>Market Place</li>
-						<li><a href="{{ route('category') }}"><i class="fa fa-caret-right"></i>Apparels & Fashion</a></li>
-						<li><a href=""><i class="fa fa-caret-right"></i>Product Category 2</a></li>
-						<li><a href=""><i class="fa fa-caret-right"></i>Product Category 3</a></li>
-						<li><a href=""><i class="fa fa-caret-right"></i>Product Category 4</a></li>
-						<li><a href=""><i class="fa fa-caret-right"></i>Product Category 5</a></li>
-						<li><a href=""><i class="fa fa-caret-right"></i>Product Category 6</a></li>
-						<li><a href=""><i class="fa fa-caret-right"></i>Product Category 7</a></li>
-						<li class="Last"><a href=""><i class="fa fa-caret-right"></i>More..<i class="fa fa-angle-right Way"></i><div class="LeftSubEntry"></div></a>
-							<ul class="LeftSubMenu">
-								<li><a href="{{ route('category') }}"><i class="fa fa-caret-right"></i>Men's Wear</a></li>
-								<li><a href="{{ route('category') }}"><i class="fa fa-caret-right"></i>Women's Wear</a></li>
-								<li><a href="{{ route('category') }}"><i class="fa fa-caret-right"></i>Kids Wear</a></li>
-							</ul>
-						</li>
+
+						<li class="Heading"><i class="fa fa-map-marker"></i>{{ $marketName }}</li>
+						
+						@foreach($categories as $key => $value)
+							
+							@if($key < 7)
+								<li><a href="{{ route('category') }}"><i class="fa fa-caret-right"></i>{{ $value->name }}</a></li>
+							@else
+								@if($key == 7)
+									<li class="Last"><a href=""><i class="fa fa-caret-right"></i>More..<i class="fa fa-angle-right Way"></i><div class="LeftSubEntry"></div></a>
+										<ul class="LeftSubMenu">
+								@endif
+											<li><a href="{{ route('category') }}"><i class="fa fa-caret-right"></i>{{ $value->name }}</a></li>
+							@endif
+
+
+						@endforeach
+						
+						@if(count($categories) >= 7)
+							</ul></li>
+						@endif
+
 					</ul>
 				</div>
 				

@@ -28,7 +28,8 @@
 
 <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/bootstrap.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/common.js') }}"></script>
+<!-- <script type="text/javascript" src="{{ asset('js/common.js') }}"></script> -->
+<script type="text/javascript" src="{{ asset('js/common_scripts.js') }}"></script>
 
 @stack('scripts')
 

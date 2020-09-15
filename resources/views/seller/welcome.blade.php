@@ -31,14 +31,25 @@
 					      <div class="panel-heading" role="tab" id="headingOne">
 					        <h4 class="panel-title">
 					        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-					          My Online Store <span class="label label-warning">Complete Your Profile</span>
+					          My Online Store 
+					          
+					          @if($isStoreExist == 0)
+					          	<span class="label label-warning">Complete Your Profile</span>
+					          @endif
+					          
 					        </a>
 					      </h4>
 					      </div>
 					      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 					        <div class="panel-body">
-				          	
-				          		<button type="button" class="btn btn-default link" data-value="{{ route('create','store') }}">Create Your Online Store</a> <i class="fa fa-plus-circle"></i></button>
+				          		
+					        	@if($isStoreExist == 0)
+					        		<!-- CREATE STORE -->
+				          			<button type="button" class="btn btn-default link" data-value="{{ route('create','store') }}">Create Your Online Store</a> <i class="fa fa-plus-circle"></i></button>
+			          			@else
+			          				<!-- EDIT STORE -->
+			          				<button type="button" class="btn btn-default link" data-value="{{ route('update','store') }}">Edit Store</a> <i class="fa fa-edit"></i></button>
+		          				@endif
 
 				          		<button type="button" class="btn btn-default">My Store</button>
 

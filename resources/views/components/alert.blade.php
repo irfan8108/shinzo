@@ -1,3 +1,13 @@
-<div>
-    <!-- Let all your things have their places; let each part of your business have its time. - Benjamin Franklin -->
-</div>
+@if(Session::has('success'))
+	<div class="alert alert-message alert-success alert-dismissible">
+		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		{{ Session::get('success') }}
+	</div>
+@endif
+
+@if(Session::has('error'))
+	<div class="alert alert-message alert-danger alert-dismissible">
+		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		{{ Session::get('error') }}
+	</div>
+@endif

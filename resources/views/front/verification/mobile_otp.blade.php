@@ -9,18 +9,20 @@
 		<div class="LogSignBox mobile_verification">
 			<div class="row">
 
-      		<form>
+      		<form method="post" action="{{ route('verification', ['verify_otp']) }}">
+      			@csrf
+      			<input type="hidden" value="m" name="type">
 	      		<center>
 	      			<img src="{{ asset('images/mobile_otp.png') }}" style="width: 50%">
 					<h4>Mobile Verification Code</h4>
-					<p>
-						Enter 5 digit verification code sent to 8888888888
+					<p style="color: green">
+						Enter 5 digit verification code sent to {{ session()->get('user_mobile') }}
 					</p>
 	      		</center>
 
 				<div class="form-group">
 					<br>
-					<input type="text" placeholder="Enter OTP" class="form-control" focus>
+					<input type="text" placeholder="Enter OTP" class="form-control" name="code" focus>
 				</div>
 
 				<div class="form-group">
@@ -30,8 +32,7 @@
 				</div>
 
 				<div class="form-group">
-					<!-- <input type="submit" value="Verify" class="form-control btn btn-primary"> -->
-					<a href="{{ route('index') }}" class="form-control btn btn-primary">Verify</a>
+					<input type="submit" value="Verify" class="form-control btn btn-primary">
 				</div>
 
 	      	</form>
